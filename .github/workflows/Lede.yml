@@ -11,6 +11,9 @@
 
 name: Lede-大雕
 on:
+  repository_dispatch:
+    types:
+      - '*-LEDE'
   workflow_dispatch:
     inputs:
       REPO_BRANCH:
