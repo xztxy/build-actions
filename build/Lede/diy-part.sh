@@ -161,6 +161,8 @@ git_sparse_clone master https://github.com/x-wrt/com.x-wrt luci-app-xwan
 #git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 #git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 #git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+##添加MOMO
+git_sparse_clone master https://github.com/nikkinikki-org/OpenWrt-momo luci-app-momo momo
 
 # 添加nikki
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki package/OpenWrt-nikki
