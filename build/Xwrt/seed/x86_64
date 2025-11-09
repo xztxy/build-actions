@@ -1,4 +1,16 @@
 CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_DEVICE_generic=y
-
+CONFIG_PACKAGE_luci-app-nikki=y
+CONFIG_PACKAGE_luci-i18n-nikki-zh-cn=y
+CONFIG_PACKAGE_nikki=y
+CONFIG_PACKAGE_luci-app-lucky=y
+CONFIG_PACKAGE_luci-i18n-lucky-zh-cn=y
+CONFIG_PACKAGE_lucky=y
+CONFIG_PACKAGE_luci-theme-kucat=y
+CONFIG_PACKAGE_luci-theme-peditx=y
+CONFIG_PACKAGE_luci-app-filebrowser=y
+CONFIG_PACKAGE_luci-app-filemanager=y
+CONFIG_PACKAGE_luci-i18n-filemanager-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-filebrowser-zh-cn=y
+CONFIG_PACKAGE_filebrowser=y
