@@ -11,6 +11,9 @@
 
 name: Xwrt-源码
 on:
+  repository_dispatch:
+    types:
+      - '*-Xwrt'
   workflow_dispatch:
     inputs:
       REPO_BRANCH:
