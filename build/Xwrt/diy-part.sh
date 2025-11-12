@@ -80,7 +80,8 @@ function git_sparse_clone() {
 # 拉取酷猫主题
 git clone --depth=1 -b master https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
 git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-kucat-config package/luci-app-kucat-config
-
+git clone https://github.com/sbwml/luci-app-mosdns package/mosdns   
+git clone https://github.com/sbwml/v2ray-geodata package/geodata
 
 # 添加Lucky
 #git clone --depth=1 https://github.com/gdy666/luci-app-lucky package/lucky
