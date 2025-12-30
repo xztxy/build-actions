@@ -228,6 +228,7 @@ CONFIG_PACKAGE_bnx2-firmware=y
 CONFIG_PACKAGE_bnx2x-firmware=y
 CONFIG_PACKAGE_boost=y
 CONFIG_PACKAGE_boost-atomic=y
+CONFIG_PACKAGE_boost-container=y
 CONFIG_PACKAGE_boost-filesystem=y
 CONFIG_PACKAGE_boost-iostreams=y
 CONFIG_PACKAGE_boost-program_options=y
