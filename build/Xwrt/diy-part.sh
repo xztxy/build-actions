@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+''#!/bin/bash
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 # DIY扩展二合一了，在此处可以增加插件
 # 自行拉取插件之前请SSH连接进入固件配置里面确认过没有你要的插件再单独拉取你需要的插件
@@ -79,7 +79,7 @@ function git_sparse_clone() {
 
 # 拉取酷猫主题
 git clone --depth=1 -b master https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
-git clone --depth=1 -b master https://github.com/sirpdboy/luci-app-kucat-config package/luci-app-kucat-config
+git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-kucat-config package/luci-app-kucat-config
 git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/mosdns
 
 # 添加Lucky
