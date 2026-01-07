@@ -65,7 +65,7 @@ jobs:
       run: |
         git clone -q -b "${REPO_BRANCH}" --single-branch "${REPO_URL}" openwrt
         ln -sf /${{ env.DIY_WORK }}/openwrt ${GITHUB_WORKSPACE}/openwrt
-        bash ${{ env.COMMON_SH }} Diy_feedsconf
+        curl -fsSL https://raw.githubusercontent.com/xztxy/common/refs/heads/main/common.sh | bash -s -- Diy_feedsconf
     
     - name: 公告
       continue-on-error: true
@@ -110,7 +110,7 @@ jobs:
       if: steps.compile.outcome == 'success'
       run: |
         cd openwrt
-        bash ${{ env.COMMON_SH }} Diy_firmware
+        curl -fsSL https://raw.githubusercontent.com/xztxy/common/refs/heads/main/common.sh | bash -s -- Diy_firmware
 
     - name: 发送[在线更新固件]至云端
       continue-on-error: true
