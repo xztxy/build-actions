@@ -125,7 +125,7 @@ jobs:
     
     - name: 下载"${{ matrix.target }}-${{ inputs.REPO_BRANCH }}"源码
       working-directory: /${{ env.DIY_WORK }}
-      run:
+      run: |
         git clone -q -b "${REPO_BRANCH}" --single-branch "${REPO_URL}" openwrt
         ln -sf /${{ env.DIY_WORK }}/openwrt ${GITHUB_WORKSPACE}/openwrt
         curl -fsSL https://raw.githubusercontent.com/xztxy/common/refs/heads/main/common.sh | bash -s -- Diy_feedsconf
