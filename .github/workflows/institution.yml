@@ -43,7 +43,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: 密匙检测
-      uses: 281677160/common@yaoshi
+      uses: xztxy/common@yaoshi
       
     - name: 部署环境
       env:
