@@ -109,7 +109,8 @@ grep -rl '"带宽监控"' . | xargs -r sed -i 's?"带宽监控"?"监控"?g'
 
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
-cat >"$CLEAR_PATH" <<-EOF
+if [ -n "$CLEAR_PATH" ]; then
+  cat >"$CLEAR_PATH" <<-EOF
 packages
 config.buildinfo
 feeds.buildinfo
@@ -120,7 +121,10 @@ openwrt-x86-64-generic-kernel.bin
 openwrt-x86-64-generic.manifest
 openwrt-x86-64-generic-squashfs-rootfs.img.gz
 EOF
+fi
 
 # 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF之间加入删除代码，记住这里对应的是固件的文件路径，比如： rm -rf /etc/config/luci
-cat >>$DELETE <<-EOF
+if [ -n "$DELETE" ]; then
+  cat >>$DELETE <<-EOF
 EOF
+fi
