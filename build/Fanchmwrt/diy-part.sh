@@ -79,15 +79,20 @@ function git_sparse_clone() {
 }
 
 # 拉取酷猫主题
-git clone --depth=1 -b master https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
-git clone --depth=1 -b master https://github.com/sirpdboy/luci-app-kucat-config package/luci-app-kucat-config
-git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/mosdns
+echo "正在克隆 luci-theme-kucat..."
+git clone --depth=1 -b master https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat || echo "克隆 luci-theme-kucat 失败，继续执行"
+echo "正在克隆 luci-app-kucat-config..."
+git clone --depth=1 -b master https://github.com/sirpdboy/luci-app-kucat-config package/luci-app-kucat-config || echo "克隆 luci-app-kucat-config 失败，继续执行"
+echo "正在克隆 luci-app-mosdns..."
+git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/mosdns || echo "克隆 luci-app-mosdns 失败，继续执行"
 
 # 添加Lucky
+echo "正在克隆 luci-app-lucky..."
 #git clone --depth=1 https://github.com/gdy666/luci-app-lucky package/lucky
-git clone --depth=1 -b main https://github.com/gdy666/luci-app-lucky package/lucky
+git clone --depth=1 -b main https://github.com/gdy666/luci-app-lucky package/lucky || echo "克隆 luci-app-lucky 失败，继续执行"
 # 添加nikki
-git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki package/OpenWrt-nikki
+echo "正在克隆 OpenWrt-nikki..."
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki package/OpenWrt-nikki || echo "克隆 OpenWrt-nikki 失败，继续执行"
 # #添加定时更新固件功能
 # git clone --depth=1 -b main https://github.com/libntdll/luci-app-autoupdate package/luci-app-autoupdate
 
