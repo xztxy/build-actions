@@ -9,8 +9,7 @@ on:
     branches:
       - main
     paths:
-      - 'build/Lede/relevance/start'
-      - 'build/Fanchmwrt/relevance/start'
+      - 'buconfig'
 
 env:
   GIT_REPOSITORY: ${{github.repository}}
@@ -31,7 +30,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-       target: [Lede, Fanchmwrt]
+       target: [Immortalwrt]
 
     steps:
     - name: 释放Ubuntu磁盘空间
